@@ -7,11 +7,22 @@
             ["María", "Luisa", "Adriana", "Angela", "Eliza", "Carol", "Ruth", "Berta", "Emperatriz", "Elizabeth", "Eunice", "Josabel"]
         ];
 
-        private static $array_lastname = ["pérez", "rodriguez", "hernández", "martínez", "molina", "garcía", "marín", "sánchez", "smith", "rivera", "alderson"];
-        private static $array_address = ["50 Manhattan Dr. Laurel, MD 20707", "93 Goldfield Dr. Xenia, OH 45385"];
-        private static $emailDomanin = ['gmail.com', 'hotmail.com', 'outlook.com', 'hotmail.es'];
+        private static $array_lastname = [
+			"pérez", "rodriguez", "hernández",
+			"martínez", "molina", "garcía",
+			"marín", "sánchez", "smith",
+			"rivera", "alderson"
+		];
+        private static $array_address = [
+			"50 Manhattan Dr. Laurel, MD 20707",
+			"93 Goldfield Dr. Xenia, OH 45385"
+		];
+        private static $emailDomanin = [
+			'gmail.com', 'hotmail.com', 'outlook.com',
+			'hotmail.es'
+		];
 
-        public static $status = NULL;
+        public static $status = '';
         public static $gender = '';
         public static $name = '';
         public static $lastname = '';
@@ -41,7 +52,8 @@
             }
         }
 
-        private static function Email(){
+        private static function Email()
+		{
             $chars = array(
                 'Á'=>'a', 'á'=>'a', 'É'=>'e', 'é'=>'e', 'Í' => 'i', 'í'=>'i', 'Ó'=>'o', 'ó'=>'o', 'Ú' => 'u', 'ú'=>'u'
             );
@@ -53,7 +65,8 @@
             return $arg;
         }
 
-        private static function randomNum($length = 10){
+        private static function randomNum($length = 10)
+		{
             $characters = '0123456789';
             $charactersLength = strlen($characters);
             $key = '';
@@ -64,7 +77,8 @@
             return $key;
         }
 
-        private function Debug(){
+        private function Debug()
+		{
             echo '__________Start Faker Person Select__________';
             echo '<br>';
             echo 'Gender set: '. ((self::$gender) ? 'Male': 'Female').'<br>';
