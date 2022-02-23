@@ -1,0 +1,7 @@
+<?php
+
+	require 'Faker_lib.php';
+	$debug = false;
+    $feker = new Faker($debug);
+
+?>
